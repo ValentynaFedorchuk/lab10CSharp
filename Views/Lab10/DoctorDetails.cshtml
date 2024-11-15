@@ -1,0 +1,29 @@
+﻿@model WebApplication10.Doctor
+
+@{
+    ViewBag.Title = "DoctorDetails";
+}
+
+<h2>Лікар</h2>
+<h4>Doctor</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-1" style="font-weight: bold; color: #333;">@Html.LabelFor(m => m.FullName)</div>
+    <div class="col-md-3" style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 5px; border-radius: 4px;">@Html.DisplayFor(model => model.FullName)</div>
+
+    <div class="col-md-1" style="font-weight: bold; color: #333;">@Html.LabelFor(m => m.Age)</div>
+    <div class="col-md-3" style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 5px; border-radius: 4px;">@Html.DisplayFor(model => model.Age)</div>
+</div>
+
+<div class="row">
+    <div class="col-md-1" style="font-weight: bold; color: #333;">@Html.LabelFor(m => m.Gender)</div>
+    <div class="col-md-3" style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 5px; border-radius: 4px;">@Html.DisplayFor(model => model.Gender)</div>
+
+    <div class="col-md-1" style="font-weight: bold; color: #333;">@Html.LabelFor(m => m.DoctorType)</div>
+    <div class="col-md-3" style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 5px; border-radius: 4px;">@Html.DisplayFor(model => model.DoctorType)</div>
+</div>
+
+<p>
+    @Html.ActionLink("Назад", "ListOfDoctors")
+</p>

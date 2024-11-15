@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WebApplication10.Doctor>
+
+@{
+    ViewBag.Title = "ListOfDoctors";
+}
+
+<h2>Список лікарів</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">ПІБ</th>
+            <th class="text-center">Вік</th>
+            <th class="text-center">#</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doctor in Model)
+        {
+            <tr class="text-center">
+                <td>@doctor.FullName</td>
+                <td>@doctor.Age</td>
+                <td>@Html.ActionLink("детальніше", "DoctorDetails", "Lab10", new { doctorId = doctor.Id }, null)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
